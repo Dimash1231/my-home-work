@@ -90,7 +90,17 @@ b.count = b.arr.length
 
 console.log(a , b);
 
-let arr2  = [[{a: {price: 20}}][{a: {price: 35}}][{a: {price: 44}}]]
+let arr2  = [
+    [{a: {price: 20}}],
+    [{a: {price: 35}}],
+    [{a: {price: 44}}]
+]
 let total = 0
-a = 
-console.log(arr2[0][0].a.price);
+// a = arr2
+// arr2[1][1].a.price
+// arr2[2][2].a.price
+
+arr2.filter(item =>  {
+    total += item[0].a.price 
+})
+console.log(total)
